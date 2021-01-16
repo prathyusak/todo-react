@@ -10,7 +10,7 @@ export default function App() {
   
   const refreshList = () => {
     axios
-    .get("https://localhost:8000/api/todos/")
+    .get("http://www.app8912.com/api/todos/")
     .then(res => {
       console.log(res.data)
       settodoList(res.data)})
@@ -30,7 +30,7 @@ const handleSubmit = (e) => {
  // }  
  if (item.id) {
    axios
-     .put(`https://localhost:8000/api/todos/${item.id}/`, item)
+     .put(`http://www.app8912.com/api/todos/${item.id}/`, item)
      .then(res => {
        console.log(res)
        refreshList()}
@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
    return;
  }
  axios
-   .post("https://localhost:8000/api/todos/", item)
+   .post("http://www.app8912.com/api/todos/", item)
    .then(res => {
      console.log(res)
      refreshList()
@@ -72,7 +72,7 @@ const handleSubmit = (e) => {
     }
     const handleDelete = item => {
       axios
-      .delete(`https://localhost:8000/api/todos/${item.id}`)
+      .delete(`http://www.app8912.com/api/todos/${item.id}`)
       .then(res => refreshList());
     }
     return newItems.map(item => (

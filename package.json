@@ -3,7 +3,7 @@
   "homepage": "https://prathyusak.github.io/todo-react/",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://localhost:8000",
+  "proxy": "http://www.app8912.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
