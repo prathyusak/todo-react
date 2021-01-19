@@ -10,7 +10,7 @@ export default function App() {
   
   const refreshList = () => {
     axios
-    .get("http://www.app8912.com/api/todos/")
+    .get("https://pacific-basin-93879.herokuapp.com/api/todos/")
     .then(res => {
       console.log(res.data)
       settodoList(res.data)})
@@ -30,7 +30,7 @@ const handleSubmit = (e) => {
  // }  
  if (item.id) {
    axios
-     .put(`http://www.app8912.com/api/todos/${item.id}/`, item)
+     .put(`https://pacific-basin-93879.herokuapp.com/api/todos/${item.id}/`, item)
      .then(res => {
        console.log(res)
        refreshList()}
@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
    return;
  }
  axios
-   .post("http://www.app8912.com/api/todos/", item)
+   .post("https://pacific-basin-93879.herokuapp.com/api/todos/", item)
    .then(res => {
      console.log(res)
      refreshList()
@@ -72,7 +72,7 @@ const handleSubmit = (e) => {
     }
     const handleDelete = item => {
       axios
-      .delete(`http://www.app8912.com/api/todos/${item.id}`)
+      .delete(`https://pacific-basin-93879.herokuapp.com/api/todos/${item.id}`)
       .then(res => refreshList());
     }
     return newItems.map(item => (
